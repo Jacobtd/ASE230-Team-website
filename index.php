@@ -2,7 +2,7 @@
 $data = array(
 	1 => array(
 		'name' => 'Jacob Doerr',
-		'dob' => '2002-08-15'
+		'dob' => '2002-08-15',
 		'title' => 'Cybersecurity Analyst',
 		'email' => 'doerrj1@mymail.nku.edu',
 		'phone' => '859-957-9125',
@@ -40,7 +40,7 @@ $data = array(
 	),
 	2 => array(
     'name' => 'John Doe',
-    'dob' => '1989-04-01'
+    'dob' => '1989-04-01',
     'title' => 'Cybersecurity Analyst',
     'email' => 'johndoe@example.com',
     'phone' => '123-456-7890',
@@ -87,6 +87,17 @@ $data = array(
 )
 );
 
+
+function displayInfo($data, $index) {
+    echo '<div class="primary-info col-auto">';
+    echo '<h1 class="name mt-0 mb-1 text-white text-uppercase text-uppercase">' . $data[$index]['name'] . '</h1>';
+    echo '<h1 class="name mt-0 mb-1 text-white text-uppercase text-uppercase">' . $data[$index]['dob'] . '</h1>';
+    echo '<div class="title mb-3">' . $data[$index]['title'] . '</div>';
+    echo '<a href="' . $data[$index]['linkedIn'] . '" class="btn btn-secondary">LinkedIn</a>';
+    echo '<a href="' . $data[$index]['github'] . '" class="btn btn-secondary">GitHub</a>';
+    echo '</div><!--//primary-info-->';
+};
+
 ?>
 <!DOCTYPE html>
 <html lang="en"> 
@@ -126,6 +137,7 @@ $data = array(
 					    <div class="row p-4 justify-content-center justify-content-md-between">
 						    <div class="primary-info col-auto">
 							    <h1 class="name mt-0 mb-1 text-white text-uppercase text-uppercase"><?php echo $data[1]['name']?></h1>
+							    <h1 class="name mt-0 mb-1 text-white text-uppercase text-uppercase"><?php displayInfo($data,0)?></h1>
 							    <div class="title mb-3"><?php echo $data[1]['title']?></div>
 								<a href="detail.php?user_id=1" class="btn btn-secondary">See full profile</a>
 						    </div><!--//primary-info-->
@@ -146,6 +158,7 @@ $data = array(
 					    <div class="row p-4 justify-content-center justify-content-md-between">
 						    <div class="primary-info col-auto">
 							    <h1 class="name mt-0 mb-1 text-white text-uppercase text-uppercase"><?php echo $data[2]['name']?></h1>
+							    <h1 class="name mt-0 mb-1 text-white text-uppercase text-uppercase"><?php displayInfo($data,1)?></h1>
 							    <div class="title mb-3"><?php echo $data[2]['title']?></div>
 								<a href="detail.php?user_id=2" class="btn btn-secondary">See full profile</a>
 						    </div><!--//primary-info-->
