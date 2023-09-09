@@ -2,6 +2,7 @@
 $data = array(
 	1 => array(
 		'name' => 'Jacob Doerr',
+		'dob' => '2002-08-15'
 		'title' => 'Cybersecurity Analyst',
 		'email' => 'doerrj1@mymail.nku.edu',
 		'phone' => '859-957-9125',
@@ -39,6 +40,7 @@ $data = array(
 	),
 	2 => array(
     'name' => 'John Doe',
+    'dob' => '1989-04-01'
     'title' => 'Cybersecurity Analyst',
     'email' => 'johndoe@example.com',
     'phone' => '123-456-7890',
